@@ -54,10 +54,12 @@ class MoviesViewController: UIViewController, UITableViewDataSource,
         
         let movie = movies[indexPath.row]
         let title = movie["title"] as! String
+        //let rating = movie["vote_average"] as? Double
         let synopsis = movie["overview"] as! String
         
         
         cell.titleLabel.text = title
+        //cell.ratingLabel.setProgress(rating , animated: true)
         cell.synopsisLabel.text = synopsis
         
         let baseUrl  = "https://image.tmdb.org/t/p/w185"
